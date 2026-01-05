@@ -1,8 +1,8 @@
-# Author: Chitraaksh
-# All Rights Reserved
-
 #!/bin/bash
 # Setup script for Raspberry Pi Face Recognition Project
+
+# Author: Chitraaksh
+# All Rights Reserved
 
 echo "Updating system..."
 sudo apt update && sudo apt upgrade -y
@@ -24,5 +24,9 @@ pip3 install --upgrade pip
 pip3 install opencv-python face_recognition numpy imutils
 
 echo "Setup complete!"
+
+echo "Checking if all libraries were installed correctly"
+python3 -c "import cv2, face_recognition, numpy; print('All good!Everthing is installed correctly')"
+
 echo "Remember to enable the Pi Camera using: sudo raspi-config"
 echo "Then reboot your Pi before running your face recognition script."
